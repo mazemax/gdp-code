@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Divider } from "semantic-ui-react";
+import { Grid, Divider, Form } from "semantic-ui-react";
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import Ad from './Ad';
 import Cart from './Cart';
@@ -13,9 +13,16 @@ class Home extends React.Component {
     super(props);
 
     const adTypes = ['classic', 'standout', 'premium'];
+    const customerOptions = [
+      { key: 'c1', text: 'Unilever', value: 'unilever' },
+      { key: 'c2', text: 'Apple', value: 'apple' },
+      { key: 'c3', text: 'Nike', value: 'nike' },
+      { key: 'c4', text: 'Ford', value: 'ford' },
+    ];
 
     this.state = {
       adTypes,
+      customerOptions,
       items: [],
       total: 0
     };
@@ -45,7 +52,7 @@ class Home extends React.Component {
 
 
   render() {
-    const { items, adTypes, total } = this.state;
+    const { items, adTypes, customerOptions, total } = this.state;
 
     return (
       <div className={s.root}>
@@ -53,6 +60,15 @@ class Home extends React.Component {
 
           <br/>
           <Grid columns={3} divided>
+
+            <Grid.Row>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <h2>Customer</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+              <Form.Group widths='equal'>
+                <Form.Select fluid options={customerOptions} placeholder='Customer' />
+              </Form.Group>
+            </Grid.Row>
+
             <Grid.Row>
 
               <Grid.Column>

@@ -3,16 +3,34 @@ import { Form, Segment } from "semantic-ui-react";
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './PriceRule.css';
 
-const options = [
-  { key: 't', text: 'True', value: 'true' },
-  { key: 'f', text: 'False', value: 'false' },
-];
-
 class PriceRule extends React.Component {
   static propTypes = {
   };
 
+  constructor(props) {
+    super(props);
+
+    const adTypes = [
+      { key: 'a1', text: 'classic', value: 'classic' },
+      { key: 'a2', text: 'standout', value: 'standout' },
+      { key: 'a3', text: 'premium', value: 'premium' },
+    ];
+    const customerOptions = [
+      { key: 'c1', text: 'Unilever', value: 'unilever' },
+      { key: 'c2', text: 'Apple', value: 'apple' },
+      { key: 'c3', text: 'Nike', value: 'nike' },
+      { key: 'c4', text: 'Ford', value: 'ford' },
+    ];
+
+    this.state = {
+      adTypes,
+      customerOptions
+    };
+  }
+
   render() {
+    const { adTypes, customerOptions } = this.state;
+
     return (
       <div className={s.root}>
         <div className={s.container}>
@@ -22,8 +40,8 @@ class PriceRule extends React.Component {
             <h1>Add Price Rule</h1>
 
             <Form.Group widths='equal'>
-              <Form.Select fluid label='Ad Type' options={options} placeholder='Ad Type' />
-              <Form.Select fluid label='Customer' options={options} placeholder='Customer' />
+              <Form.Select fluid label='Ad Type' options={adTypes} placeholder='Ad Type' />
+              <Form.Select fluid label='Customer' options={customerOptions} placeholder='Customer' />
             </Form.Group>
 
             <Segment>
