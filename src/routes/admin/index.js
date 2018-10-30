@@ -2,7 +2,7 @@ import React from 'react';
 import Admin from './Admin';
 import Layout from '../../components/Layout';
 
-async function action({ }) {
+async function action() {
 
   return {
     title: 'Admin',

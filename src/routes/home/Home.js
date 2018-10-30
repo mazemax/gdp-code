@@ -31,7 +31,7 @@ class Home extends React.Component {
 
   handleRemove = (type) =>  {
     const {items} = this.state;
-    let itemsCopy = items.slice(0);
+    const itemsCopy = items.slice(0);
     const index = itemsCopy.indexOf(type);
 
     if(index >= 0) {

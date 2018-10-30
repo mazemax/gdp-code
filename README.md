@@ -9,7 +9,7 @@
   
 ### Directory Layout
 
-Before you start, take a moment to see how the project structure looks like:
+Take a moment to see how the project structure looks like:
 
 ```
 .

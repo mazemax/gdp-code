@@ -2,7 +2,7 @@ import React from 'react';
 import Customer from './Customer';
 import Layout from '../../components/Layout';
 
-async function action({ fetch }) {
+async function action() {
 
   return {
     title: 'Customer',

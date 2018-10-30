@@ -4,7 +4,7 @@ import uuidv4 from "uuid/v4";
 import startCase from 'lodash/startCase';
 import { Icon,  List, Transition } from "semantic-ui-react";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
-import s from "./Home.css";
+import s from "./semantic-ui.css";
 
 class Cart extends React.Component {
 

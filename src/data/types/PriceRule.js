@@ -11,7 +11,7 @@ import {
 const PriceRule = new ObjectType({
   name: 'PriceRule',
   fields: {
-    _id: { type: ID },
+    _id: { type: new NonNull(ID) },
     customerId: { type: StringType },
     adTypeId: { type: StringType },
     // deal: { type: Deal },

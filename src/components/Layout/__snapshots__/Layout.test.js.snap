@@ -14,6 +14,13 @@ exports[`Layout renders children correctly 1`] = `
       >
         <a
           className="link"
+          href="/admin"
+          onClick={[Function]}
+        >
+          Admin
+        </a>
+        <a
+          className="link"
           href="/about"
           onClick={[Function]}
         >
@@ -25,30 +32,6 @@ exports[`Layout renders children correctly 1`] = `
           onClick={[Function]}
         >
           Contact
-        </a>
-        <span
-          className="spacer"
-        >
-           | 
-        </span>
-        <a
-          className="link"
-          href="/login"
-          onClick={[Function]}
-        >
-          Log in
-        </a>
-        <span
-          className="spacer"
-        >
-          or
-        </span>
-        <a
-          className="link highlight"
-          href="/register"
-          onClick={[Function]}
-        >
-          Sign up
         </a>
       </div>
       <a
@@ -66,7 +49,7 @@ exports[`Layout renders children correctly 1`] = `
         <span
           className="brandTxt"
         >
-          Your Company
+          M.Saad Siddiqui
         </span>
       </a>
       <div
@@ -75,12 +58,12 @@ exports[`Layout renders children correctly 1`] = `
         <h1
           className="bannerTitle"
         >
-          React
+          Ads Checkout
         </h1>
         <p
           className="bannerDesc"
         >
-          Complex web apps made easy
+          SEEK is in the process of rewriting its job ads checkout system.
         </p>
       </div>
     </div>
@@ -97,7 +80,7 @@ exports[`Layout renders children correctly 1`] = `
       <span
         className="text"
       >
-        © Your Company
+        © M.Saad Siddiqui
       </span>
       <span
         className="spacer"
